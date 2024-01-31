@@ -71,10 +71,10 @@ function verifyPayment(orderId, paymentId, signature) {
          .done(function(isValid) {
              if (isValid) {
             	 alert("payment successful")
-                window.location.href="Payment-success";
+                window.location.href='Payment-success';
              } else {
             	 alert("payment failed")
-                  window.location.href="Payment-failure";
+                  window.location.href='Payment-failure';
              }
          })
          .fail(function(error) {
