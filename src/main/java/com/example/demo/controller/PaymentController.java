@@ -75,12 +75,12 @@ public class PaymentController {
 	public boolean verifyPayment(@RequestParam  String orderId, @RequestParam String paymentId, @RequestParam String signature) {
 	    try {
 	       
-	        RazorpayClient razorpayClient = new RazorpayClient("rzp_test_pvGIc9JvXWZTVS", "UlnLCUb8lRxvBKRyIYRYWrEO");
+	        RazorpayClient razorpayClient = new RazorpayClient("rzp_test_UAYfpvDjzQx5ip","jVJc5BFJABPhREl86m4Xbyi8");
 	        
 	        String verificationData = orderId + "|" + paymentId;
 
 	        
-	        boolean isValidSignature = Utils.verifySignature(verificationData, signature, "UlnLCUb8lRxvBKRyIYRYWrEO");
+	        boolean isValidSignature = Utils.verifySignature(verificationData, signature,"jVJc5BFJABPhREl86m4Xbyi8");
 
 	        return isValidSignature;
 	    } catch (RazorpayException e) {
